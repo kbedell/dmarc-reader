@@ -29,7 +29,7 @@ services:
       - ./app:/var/www/html
       
   web:
-    image: nginx:1.12-alpine
+    image: easternwind/dmarcproject:nginx-dmarc
     depends_on:
       - app
     ports:
