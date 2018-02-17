@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  mongo:
+    image: mongo:3.6-jessie
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo:/var/lib/mongo
+
+  redis:
+    image: redis:4.0-alpine
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis:/var/lib/redis/data
+
+  app:
+    build:
+      context: app/
+      args:
+        COMPOSER_FLAGS: "--no-scripts --prefer-dist"
+    depends_on:
+      - mongo
+    working_dir: /var/www/html
+    env_file:
+      - ./app/.env
+    volumes:
+      - ./app:/var/www/html
+      
+  web:
+    image: nginx:1.12-alpine
+    depends_on:
+      - app
+    ports:
+      - '8080:80'
+    volumes:
+      - ./app:/var/www/html
+
+volumes:
+  mongo:
+  redis:
