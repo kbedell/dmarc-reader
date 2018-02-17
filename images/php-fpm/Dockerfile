@@ -12,12 +12,13 @@ RUN apk update \
     && pecl channel-update pecl.php.net \
     && pecl install -f mcrypt redis \
     && pecl install -f mongodb \
+    && echo "extension=mongodb.so" > /usr/local/etc/php/conf.d/mongodb.ini \
     && echo "extension=mcrypt.so" > /usr/local/etc/php/conf.d/mcrypt.ini \
     && echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini
 
 ENV APP_DIR /var/www/html
 
-ADD build-scripts /build-scripts
+ADD /build-scripts /build-scripts
 
 RUN find /build-scripts -type f -exec chmod +x {} \; \
     && /build-scripts/install_composer.sh
