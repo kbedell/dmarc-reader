@@ -18,7 +18,7 @@ fi
 $cmd &
  
 if [ ! -f /data/db/.build-admin ]; then
-    /build-admin.sh
+    /build-scripts/build-admin.sh
 fi
  
 fg
