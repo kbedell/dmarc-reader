@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d17e9129c640b8809816a7f76bfbe509",
+    "content-hash": "5c0d57f951d8745c8bf563a9792a7a14",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -673,6 +673,103 @@
             "time": "2018-03-06T13:48:07+00:00"
         },
         {
+            "name": "laravelnews/laravel-twbs4",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravelnews/laravel-twbs4.git",
+                "reference": "581c76b611be3e31b1516fa84a54a20e6883aeea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravelnews/laravel-twbs4/zipball/581c76b611be3e31b1516fa84a54a20e6883aeea",
+                "reference": "581c76b611be3e31b1516fa84a54a20e6883aeea",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "LaravelNews\\Presets\\BootstrapFour\\BootstrapPresetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelNews\\Presets\\BootstrapFour\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Redmond",
+                    "email": "paulrredmond@gmail.com"
+                }
+            ],
+            "description": "Laravel 5 frontend preset for Twitter Bootstrap 4",
+            "time": "2018-02-09T15:56:24+00:00"
+        },
+        {
+            "name": "laravie/parser",
+            "version": "v1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravie/parser.git",
+                "reference": "e759ba3e5a82151a320ad6e005da0937149bfe35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravie/parser/zipball/e759ba3e5a82151a320ad6e005da0937149bfe35",
+                "reference": "e759ba3e5a82151a320ad6e005da0937149bfe35",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.1",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.4 || ~1.0",
+                "phpunit/phpunit": "~4.8.35 || ~5.7 || ~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravie\\Parser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mior Muhammad Zaki",
+                    "email": "crynobone@gmail.com",
+                    "homepage": "https://github.com/crynobone"
+                }
+            ],
+            "description": "XML Document Parser for PHP",
+            "keywords": [
+                "parser",
+                "xml"
+            ],
+            "time": "2017-12-25T12:36:44+00:00"
+        },
+        {
             "name": "league/flysystem",
             "version": "1.0.43",
             "source": {
@@ -1046,6 +1143,67 @@
                 "php"
             ],
             "time": "2018-02-28T20:30:58+00:00"
+        },
+        {
+            "name": "orchestra/parser",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orchestral/parser.git",
+                "reference": "fdae8b4a6e1b4282266527ca25bae3b07fa7fb53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orchestral/parser/zipball/fdae8b4a6e1b4282266527ca25bae3b07fa7fb53",
+                "reference": "fdae8b4a6e1b4282266527ca25bae3b07fa7fb53",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "~5.5.0",
+                "laravie/parser": "~1.2",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "illuminate/support": "~5.5.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.5-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Orchestra\\Parser\\XmlServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Orchestra\\Parser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mior Muhammad Zaki",
+                    "email": "crynobone@gmail.com",
+                    "homepage": "https://github.com/crynobone"
+                }
+            ],
+            "description": "XML Document Parser for Laravel and PHP",
+            "keywords": [
+                "laravel",
+                "orchestra-platform",
+                "orchestral",
+                "parser",
+                "xml"
+            ],
+            "time": "2017-07-26T10:16:03+00:00"
         },
         {
             "name": "paragonie/random_compat",
